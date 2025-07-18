@@ -7,37 +7,44 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
-    <h1>botón para hannitaclash (derechosreservados)</h1>
-  <button id="playButton">
-    <img src="play-button.png" alt="" />
-    reproduce la musica chikita 😘 
-  </button>
+    <h1>botón para hannitaclash (derechos reservados)</h1>
 
-  <img id="imagen" src="mutolindo.png" alt="Mutolindo" style="max-width: 90%; height: auto;" />
+    <!-- Botón para reproducir -->
+    <button id="playButton">
+        <img src="play-button.png" alt="" />
+        reproduce la musica chikita 😘 
+    </button>
 
-  <audio id="audio" src="musicaromantica.mp3" loop></audio>
+    <!-- Imagen -->
+    <img id="imagen" src="mutolindo.png" alt="Mutolindo" style="max-width: 90%; height: auto;" />
 
+    <!-- Audio sin autoplay -->
+    <audio id="audio" src="musicaromantica.mp3" loop></audio>
 
-   <img id="gifImagen" src="down.gif" alt="Downgift" style="max-width: 90%; height: auto;" />
+    <!-- Gif -->
+    <img id="gifImagen" src="down.gif" alt="Downgift" style="max-width: 90%; height: auto;" />
 
-  <button id="gifButton">
-  Te amo nalgona
-</button>
+    <!-- Botón extra -->
+    <button id="gifButton">
+        Te amo nalgona
+    </button>
 
-  <script>
-    const playButton = document.getElementById("playButton");
-    const audio = document.getElementById("audio");
-    const imagen = document.getElementById("imagen");
+    <script>
+        const playButton = document.getElementById("playButton");
+        const audio = document.getElementById("audio");
+        const imagen = document.getElementById("imagen");
 
-    
+        playButton.addEventListener("click", () => {
+            audio.play().then(() => {
+                console.log("🎶 Música reproduciéndose");
+            }).catch(error => {
+                console.log("Error reproduciendo música:", error);
+            });
 
-   playButton.addEventListener("click", () => {
-    audio.play ();
-    imagen.classList.toggle("mostrar");
-   });
-
-  </script>
+            imagen.classList.toggle("mostrar"); 
+            playButton.style.display = "none"; 
+        });
+    </script>
 </body>
-</html> 
+</html>

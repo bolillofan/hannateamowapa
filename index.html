@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Botón con Imagen y Música</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <h1>botón para hannitaclash (derechosreservados)</h1>
+  <button id="playButton">
+    <img src="play-button.png" alt="" />
+    reproduce la musica chikita 😘 
+  </button>
+
+  <img id="imagen" src="mutolindo.png" alt="Mutolindo" style="max-width: 90%; height: auto;" />
+
+  <audio id="audio" src="musicaromantica.mp3" loop></audio>
+
+
+   <img id="gifImagen" src="down.gif" alt="Downgift" style="max-width: 90%; height: auto;" />
+
+  <button id="gifButton">
+  Te amo nalgona
+</button>
+
+  <script>
+    const playButton = document.getElementById("playButton");
+    const audio = document.getElementById("audio");
+    const imagen = document.getElementById("imagen");
+
+    
+
+   playButton.addEventListener("click", () => {
+    audio.play ();
+    imagen.classList.toggle("mostrar");
+   });
+
+  </script>
+</body>
+</html> 
